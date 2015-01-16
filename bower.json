@@ -1,0 +1,20 @@
+{
+  "name": "nagrawal7.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nagrawal7/nagrawal7.github.io",
+  "authors": [
+    "Nishad Agrawal <nishadagrawal7@gmail.com>"
+  ],
+  "description": "My personal webpage",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2"
+  }
+}
