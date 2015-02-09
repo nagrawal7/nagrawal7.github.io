@@ -8,6 +8,11 @@ $(document).ready(function(){
     myFirebaseRef.child("password").on("value", function(snapshot) {
         password = snapshot.val();
     });
+    var resumeLink;   
+    myFirebaseRef.child("resumeLink").on("value", function(snapshot) {
+        resumeLink = snapshot.val();
+    });
+
     $('#loginButton').click(function(){
         var input = $('#passkeyInput').val();
         if (input === password) {
@@ -17,4 +22,7 @@ $(document).ready(function(){
         	$("#wrongIcon").removeClass('hide');  	
         }        
     });
+    $('#resumeLink').click(function(){
+        window.resumeLink.href = resumeLink;                
+    });    
 });

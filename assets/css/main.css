@@ -183,6 +183,11 @@ a:after {
 	color: white;
 }
 
+#headerwrap h3 a {
+	font-size: 20px;
+	color: white;
+}
+
 /* Intnro Wrap */
 
 #intro {
