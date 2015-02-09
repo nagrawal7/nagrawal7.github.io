@@ -3,10 +3,14 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
+    var myFirebaseRef = new Firebase("https://nishadagrawal.firebaseio.com/"); 
+    var password;   
+    myFirebaseRef.child("password").on("value", function(snapshot) {
+        password = snapshot.val();
+    });
     $('#loginButton').click(function(){
         var input = $('#passkeyInput').val();
-        console.log(input);
-        if (input === 'password') {
+        if (input === password) {
             $('#loginModal').modal('hide');
             $("#pageContent").removeClass('hide');  
         } else {
