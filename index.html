@@ -1,13 +1,454 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!-- 1. Load platform support before any code that touches the DOM. -->
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <!-- 2. Load the component using an HTML Import -->
-    <link rel="import" href="elements/my-element.html">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Nishad Agrawal</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+    <script src="assets/js/Chart.js"></script>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="form.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
   </head>
-  <body>
-    <!-- 3. Declare the element by its tag. -->
-    <my-element></my-element>
+
+  <body data-spy="scroll" data-offset="0" data-target="#nav">  
+
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+      data-keyboard="false" data-backdrop="static" style="background-color: #34495e">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">                    
+                    <h4 class="modal-title">Please Enter Passkey</h4>
+                </div>                
+              	<div class="modal-body">    
+                  	<div class="form-group">
+	                    <div class="col-xs-5">
+	                        <input type="password" class="form-control" name="password" id="passkeyInput" />                            
+	                    </div>                        
+	                    <div class="col-xs-5 hide"  id="wrongIcon">
+	                    	<span class="glyphicon glyphicon-remove" aria-hidden="true" style="vertical-align:middle; color:red "></span>
+                    	</div>
+                  	</div>                                  
+          		</div>
+            	<div class="modal-footer">
+        			<button type="submit" class="btn btn-primary" data-toggle="modal" id="loginButton">Enter</button>        				
+      			</div>
+        	</div>
+    	</div>
+	</div>
+
+  	<div class = "hide" id="pageContent">	
+	<div id="section-topbar">
+		<div id="topbar-inner">
+			<div class="container">
+				<div class="row">
+					<div class="dropdown">
+						<ul id="nav" class="nav">
+							<li class="menu-item"><a class="smoothScroll" href="#about" title="About"><i class="icon-user"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#resume" title="Resume"><i class="icon-file"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#work" title="Works"><i class="icon-briefcase"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
+						</ul><!--/ uL#nav -->
+					</div><!-- /.dropdown -->
+
+					<div class="clear"></div>
+				</div><!--/.row -->
+			</div><!--/.container -->
+
+			<div class="clear"></div>
+		</div><!--/ #topbar-inner -->
+	</div><!--/ #section-topbar -->
+	
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-12">
+					<h1>Nishad Agrawal</h1>
+					<h3>Aspiring Software Engineer | nna6@duke.edu</h3>
+				</div><!--/.col-lg-12 -->
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/.#headerwrap -->
+	
+
+	<section id="about" name="about"></section>
+	<div id="intro">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>ABOUT</h5>
+				</div>
+				<div class="col-lg-6">
+					<p>I'm a Sophmore at Duke University studying Electrical and Computer Engineering with a Double Major in Computer Science. I'm interested in all types of software engineering and am open to all potential opportunities. I also have skills in team management, leadership, and communication.</p>
+				</div>
+				<div class="col-lg-3">
+					<p><a href="#"><i class="icon-file"></i></a> <sm>DOWNLOAD PDF</sm></p>
+				</div>
+				
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/ #intro -->
+
+
+	<section id="resume" name="resume"></section>
+	<!--EDUCATION DESCRIPTION -->
+	<div class="container desc">
+		<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>EDUCATION</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>B.S. in Electrical and Computer Engineering</t><br/>
+						<strong>Duke University</strong> in Durham, NC<br/>
+						<i>Double Major with Computer Science</i> <br>
+						<i>Cumulative GPA: 3.96/4.00</i><br>
+                		<i>Dean’s List with Distinction (Top 5%)</i>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>GRADUATING IN MAY 2017</sm><br/>
+					<imp><sm>IN PROGRESS</sm></imp>
+					</p>
+				</div>
+	
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><t>High School Dipolma</t><br/>
+						<strong>University School of Milwaukee</strong> in Milwaukee, WI<br/>
+						<i>GPA: 4.23/4.00 (Salutatorian and Cum Laude Society)</i><br>
+						<i>National AP Scholar, AP Scholar with Distinction, National Merit Finalist</i>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>MAY 2013</sm></p>
+				</div>
+	
+		</div><!--/.row -->
+		<br>
+		<hr>
+	</div><!--/.container -->
+	
+	
+	<!--WORK DESCRIPTION -->
+	<div class="container desc">
+		<div class="row">
+
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>TECHNICAL EXPERIENCE</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>Software Developer Intern</t><br/>
+						TeraMedica Inc.</p>
+						<p>Worked full-time for 3 months producing unit test code and developing web application to run database integration tests across Oracle, SQL Server, and DB2 using JSF</p>
+                		<p>Surpassed initial project goal of 60% code coverage in single module, went on to raise 3 additional modules from 10% to 70% coverage and doubled coverage across entire code base (300,000 lines)</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SUMMER 2014</sm></p>
+				</div>
+	
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><t>Android App Developer</t><br/>
+						Dr. Dawg Restaurant <br/>
+					</p>
+					<p>Independently contracted to produce user-friendly, functional app to provide map directions, social media interaction, and mobile ordering system for customers.</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SUMMER 2013</sm></p>
+				</div>
+
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><t>Corporate IT Intern</t><br/>
+						Johnson Controls <br/>
+					</p>
+					<p>Present Research Cloud Computing and Social Media to CIO and his team.</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SUMMER 2012 (1 WEEK)</sm></p>
+				</div>
+		</div><!--/.row -->
+	</div><!--/.container -->	
+	
+	<!--SKILLS DESCRIPTION -->
+	<div id="skillswrap">
+		<div class="container">
+			<div class="row">
+					<div class="col-lg-2 col-lg-offset-1">
+						<h5>SKILLS</h5>
+					</div>
+					<div class="col-lg-3 centered">
+						<canvas id="javascript" height="130" width="130"></canvas>
+						<p>Javascript</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 70,
+										color:"#1abc9c"
+									},
+									{
+										value : 30,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+					<div class="col-lg-3 centered">
+						<canvas id="bootstrap" height="130" width="130"></canvas>
+						<p>Bootstrap</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 90,
+										color:"#1abc9c"
+									},
+									{
+										value : 10,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+					<div class="col-lg-3 centered">
+						<canvas id="wordpress" height="130" width="130"></canvas>
+						<p>Wordpress</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 65,
+										color:"#1abc9c"
+									},
+									{
+										value : 35,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+					
+					<div class="col-lg-3 col-lg-offset-3 centered">
+						<canvas id="html" height="130" width="130"></canvas>
+						<p>HTML/CSS</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 80,
+										color:"#1abc9c"
+									},
+									{
+										value : 20,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+					<div class="col-lg-3 centered">
+						<canvas id="photoshop" height="130" width="130"></canvas>
+						<p>Photoshop</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 70,
+										color:"#1abc9c"
+									},
+									{
+										value : 30,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+					<div class="col-lg-3 centered">
+						<canvas id="illustrator" height="130" width="130"></canvas>
+						<p>Illustrator</p>
+						<br>
+						<script>
+							var doughnutData = [
+									{
+										value: 50,
+										color:"#1abc9c"
+									},
+									{
+										value : 50,
+										color : "#ecf0f1"
+									}
+								];
+								var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
+						</script>
+					</div>
+
+			</div><!--/.row -->
+			<br>
+		</div><!--/.container -->
+	</div><!--/ #skillswrap -->
+
+	<section id="work" name="work"></section>	
+	<!--AWARDS DESCRIPTION -->
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>WORK AND LEADERSHIP EXPERIENCE</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>Student Assistant</t><br/>
+						Duke Athletic Facilities and Game Operations<br/>
+					</p>
+					<p>Work with athletic department, varsity teams, facilities staff, and spectators to set up, run, and break down athletic events (10 hrs. / week)
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>2013 - CURRENT</sm></p>
+				</div>
+	
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><t>Engineering 103 1-on-1 Peer Tutor</t><br/>
+						Duke University
+					</p>
+					<p>Work individually with students on homework, problem sets, and preparing for exams in an introductory programming course taught in MATLAB</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>AUGUST 2014 - CURRENT</sm></p>
+				</div>
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><t>Prefect, Head of High School Student Government</t><br/>
+						Univesity School of Milwaukee
+					</p>
+					<li>1 of 6 students elected to school’s highest leadership position</li> 
+                <li>Perform tasks including organizing blood drives, dances, dodge ball tournament, and town hall event to facilitate communication between teachers and students</li>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>2012 - 2013</sm></p>
+				</div>
+		</div><!--/.row -->
+		<hr>
+	</div><!--/.container -->
+
+	<div class="container desc">
+		<div class="row">
+			<div class="col-lg-6">
+				<h2 id="section-3">Technical Skills</h2>
+              <ul>
+              <li>Java (3 semesters of coursework)</li>
+              <li>Tools: Android, JavaFX, Gradle, Maven, Jenkins, Jacoco, Mockito, Jetty, JUnit</li>
+              <li>MATLAB (1 semester of coursework)</li>
+              <li>Latex (1 semester of coursework) </li>
+              <li>Scheme (1 semester of coursework)</li>
+              <li>HTML/CSS</li>
+              <li>C and MIPS Assembly </li>
+              </ul>
+              </div>
+             <div class="col-lg-6">
+              <h2 id="section-4">Relevant Coursework</h2>
+              <ul>
+                <li>CS 308 – Software Design and Implementation asdf<strong></strong></li>
+                <li>CS 250 – Computer Architecture</li>
+                <li>CS 230 – Discrete Math for Computer Science</li>
+                <li>CS 201 – Data Structures and Algorithms</li>
+                <li>EGR 103L – Computational Methods in Engineering</li>
+              </ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>OTHER SKILLS AND INTERESTS</h5>
+				</div>
+				<div class="col-lg-6">
+				<ul>
+					<li>Public Speaking – within the past two years I have given 5 speeches to 300+ person audiences</li>
+                <li>Fluent in English, Spanish, Hindi, and Marathi</li>
+                <li>High School Varsity Baseball </li>
+                <li>Captain (Senior Year), 2nd Team All Conference, Wisconsin Division 2 State Champion, Streak of 75 consecutive starts</li>
+                </ul>
+                </div>					
+		</div><!--/.row -->
+		<br>
+	</div><!--/.container -->	
+
+
+	<section id="contact" name="contact"></section>
+	<!--FOOTER DESCRIPTION -->
+	<div id="footwrap">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>CONTACT</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>Email</t><br/>
+						<a href="mailto:nna6@duke.edu">nna6@duke.edu</a><br>
+					</p>
+					<p><t>Address</t><br>
+						Few Quad 212<br>
+                		Box Number 98177<br>
+                		Durham, NC 27708<br>
+					</p>
+					<p><t>Phone</t><br/>
+						262-565-7858 <br/>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SOCIAL LINKS</sm></p>
+					<p>
+						<a href="#"><i class="icon-dribbble"></i></a>
+						<a href="#"><i class="icon-twitter"></i></a>
+						<a href="#"><i class="icon-facebook"></i></a>
+						<a href="#"><i class="icon-linkedin"></i></a>
+						<a href="#"><i class="icon-apple"></i></a>
+
+					</p>
+				</div>
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/ #footer -->
+	
+	<div id="c">
+		<div class="container">
+			<p>Theme by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
+    </div>
   </body>
 </html>
