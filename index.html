@@ -22,7 +22,9 @@
     
     <script src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+    
     <script src="assets/js/Chart.js"></script>
+    
 
     <script src="assets/js/bootstrap.js"></script>
     <script src="login.js"></script>
@@ -73,8 +75,11 @@
 					<div class="dropdown">
 						<ul id="nav" class="nav" style="vertical-align:middle">
 							<li class="menu-item" ><a class="smoothScroll" href="#about" title="About"><i class="icon-user"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#resume" title="Resume"><i class="icon-file"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#work" title="Works"><i class="icon-briefcase"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#education" title="Education"><i class="icon-book"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#tech" title="Technical Experience"><i class="icon-laptop"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#techskills" title="Technical Skills"><i class="icon-code"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#work" title="Work Experience"><i class="icon-briefcase"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#info" title="Additional Info"><i class="icon-info"></i></a></li>
 							<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
 						</ul><!--/ uL#nav -->
 					</div><!-- /.dropdown -->
@@ -99,11 +104,11 @@
 	</div><!--/.#headerwrap -->
 	
 
-	<section id="about" name="about"></section>
-	<div id="intro">
+	<section id="about" name="about"></section>	
+	<div id="intro">		
+		<br>	
 		<div class="container">
-			<div class="row">
-				
+			<div class="row">				
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>ABOUT</h5>
 				</div>
@@ -113,18 +118,16 @@
 				<div class="col-lg-3">
 					<p><a href="" id="resumeLink"><i class="icon-file"></i></a> <sm>
 					DOWNLOAD PDF</sm></p>
-				</div>
-				
-			</div><!--/.row -->
-		</div><!--/.container -->
-	</div><!--/ #intro -->
+				</div>				
+			</div>
+		</div>
+	</div>
 
 
-	<section id="resume" name="resume"></section>
-	<!--EDUCATION DESCRIPTION -->
+	<section id="education" name="education"></section>
+	<br>
 	<div class="container desc">
 		<div class="row">
-
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>EDUCATION</h5>
 				</div>
@@ -141,7 +144,6 @@
 					<imp><sm>IN PROGRESS</sm></imp>
 					</p>
 				</div>
-	
 				<div class="col-lg-6 col-lg-offset-3">
 					<p><t>High School Dipolma</t><br/>
 						<strong>University School of Milwaukee</strong> in Milwaukee, WI<br/>
@@ -152,176 +154,147 @@
 				<div class="col-lg-3">
 					<p><sm>MAY 2013</sm></p>
 				</div>
-	
-		</div><!--/.row -->
+		</div>
 		<br>
-		<hr>
-	</div><!--/.container -->
+	</div>
 	
-	
-	<!--WORK DESCRIPTION -->
+	<section id="tech" name="tech"></section>
+	<hr>
 	<div class="container desc">
 		<div class="row">
-
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>TECHNICAL EXPERIENCE</h5>
 				</div>
 				<div class="col-lg-6">
 					<p><t>Software Developer Intern</t><br/>
-						TeraMedica Inc.</p>
+						<strong>TeraMedica Inc.</strong></p>
 						<p>Worked full-time for 3 months producing unit test code and developing web application to run database integration tests across Oracle, SQL Server, and DB2 using JSF</p>
                 		<p>Surpassed initial project goal of 60% code coverage in single module, went on to raise 3 additional modules from 10% to 70% coverage and doubled coverage across entire code base (300,000 lines)</p>
 				</div>
 				<div class="col-lg-3">
 					<p><sm>SUMMER 2014</sm></p>
-				</div>
-	
+				</div>	
 				<div class="col-lg-6 col-lg-offset-3">
 					<p><t>Android App Developer</t><br/>
-						Dr. Dawg Restaurant <br/>
+						<strong>Dr. Dawg Restaurant</strong> <br/>
 					</p>
 					<p>Independently contracted to produce user-friendly, functional app to provide map directions, social media interaction, and mobile ordering system for customers.</p>
 				</div>
 				<div class="col-lg-3">
 					<p><sm>SUMMER 2013</sm></p>
 				</div>
-
 				<div class="col-lg-6 col-lg-offset-3">
 					<p><t>Corporate IT Intern</t><br/>
-						Johnson Controls <br/>
+						<strong>Johnson Controls</strong> <br/>
 					</p>
 					<p>Present Research Cloud Computing and Social Media to CIO and his team.</p>
 				</div>
 				<div class="col-lg-3">
 					<p><sm>SUMMER 2012 (1 WEEK)</sm></p>
 				</div>
-		</div><!--/.row -->
-	</div><!--/.container -->	
-	
-	<!--SKILLS DESCRIPTION -->
-	<div id="skillswrap">
-		<div class="container">
-			<div class="row">
-					<div class="col-lg-2 col-lg-offset-1">
-						<h5>SKILLS</h5>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="javascript" height="130" width="130"></canvas>
-						<p>Javascript</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 70,
-										color:"#1abc9c"
-									},
-									{
-										value : 30,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="bootstrap" height="130" width="130"></canvas>
-						<p>Bootstrap</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 90,
-										color:"#1abc9c"
-									},
-									{
-										value : 10,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="wordpress" height="130" width="130"></canvas>
-						<p>Wordpress</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 65,
-										color:"#1abc9c"
-									},
-									{
-										value : 35,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					
-					<div class="col-lg-3 col-lg-offset-3 centered">
-						<canvas id="html" height="130" width="130"></canvas>
-						<p>HTML/CSS</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 80,
-										color:"#1abc9c"
-									},
-									{
-										value : 20,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("html").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="photoshop" height="130" width="130"></canvas>
-						<p>Photoshop</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 70,
-										color:"#1abc9c"
-									},
-									{
-										value : 30,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("photoshop").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
-					<div class="col-lg-3 centered">
-						<canvas id="illustrator" height="130" width="130"></canvas>
-						<p>Illustrator</p>
-						<br>
-						<script>
-							var doughnutData = [
-									{
-										value: 50,
-										color:"#1abc9c"
-									},
-									{
-										value : 50,
-										color : "#ecf0f1"
-									}
-								];
-								var myDoughnut = new Chart(document.getElementById("illustrator").getContext("2d")).Doughnut(doughnutData);
-						</script>
-					</div>
+		</div>
+		<br>
+		
+	</div>
 
-			</div><!--/.row -->
-			<br>
-		</div><!--/.container -->
-	</div><!--/ #skillswrap -->
-
+	<section id="techskills" name="techskills"></section>
+	<hr>
+	<div class="container desc">
+		<div class="row">
+			<div class="col-sm-6">
+				<h2 id="section-3">Technical Skills</h2>
+				<table class="table table-condensed table-hover">
+				    <thead>
+				        <tr>
+				            <th>Language</th>
+				            <th>Experience</th>
+				            <th>Tools</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				    	<tr>
+				            <td><strong>Java</strong></td>
+				            <td>3 Semesters</td>
+				            <td>Android, JavaFX, Gradle, Maven, Jenkins, Jacoco, Mockito, Jetty, JUnit</td>
+				        </tr>
+				        <tr>
+				            <td><strong>C and MIPS Assembly</strong></td>
+				            <td>1 Semester</td>
+				            <td>-</td>
+				        </tr>
+				        <tr>
+				            <td><strong>MATLAB</strong></td>
+				            <td>2 Semesters</td>
+				            <td>Simulink</td>
+				        </tr>
+				        <tr>
+				        	<td><strong>HTML/CSS/JS</strong></td>
+				            <td>Self-Taught</td>
+				            <td>-</td>
+				        </tr>
+				        <tr>
+				        	<td><strong>Scheme</strong></td>
+				            <td>1 Semester</td>
+				            <td>Functional Programming</td>
+				        </tr>
+				        <tr>
+				        	<td><strong>Text Editing</strong></td>
+				            <td>...</td>
+				            <td>Markdown and Latex</td>
+				        </tr>
+				    </tbody>
+				</table>
+              </div>
+             <div class="col-sm-6">
+              <h2 id="section-4">Relevant Coursework</h2>
+                <table class="table table-condensed table-hover">
+				    <thead>
+				        <tr>
+				            <th>Course</th>
+				            <th>Name</th>
+				            <th>Grade</th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				    	<tr>
+				            <td>CS 330</td>
+				            <td>Algorithms</td>
+				            <td><strong>TBD</strong></td>
+				        </tr>
+				        <tr>
+				            <td>CS 308</td>
+				            <td>Software Design and Implementation</td>
+				            <td><strong>A</strong></td>
+				        </tr>
+				        <tr>
+				            <td>CS 250</td>
+				            <td>Computer Architecture</td>
+				            <td><strong>A</strong></td>
+				        </tr>
+				        <tr>
+				            <td>CS 230</td>
+				            <td>Discrete Math for Computer Science</td>
+				            <td><strong>A</strong></td>
+				        </tr>
+				        <tr>
+				            <td>CS 201</td>
+				            <td>Data Structures and Algorithms</td>
+				            <td><strong>A</strong></td>
+				        </tr>
+				        <tr>
+				            <td>EGR 103L</td>
+				            <td>Computational Methods in Engineering</td>
+				            <td><strong>A</strong></td>
+				        </tr>
+				    </tbody>
+				</table>
+			</div>
+		</div>
+		<br>		
+	</div>
+			
 	<section id="work" name="work"></section>	
-	<!--AWARDS DESCRIPTION -->
+	<hr>	
 	<div class="container desc">
 		<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
@@ -329,7 +302,7 @@
 				</div>
 				<div class="col-lg-6">
 					<p><t>Student Assistant</t><br/>
-						Duke Athletic Facilities and Game Operations<br/>
+						<strong>Duke Athletic Facilities and Game Operations</strong><br/>
 					</p>
 					<p>Work with athletic department, varsity teams, facilities staff, and spectators to set up, run, and break down athletic events (10 hrs. / week)
 					</p>
@@ -337,10 +310,9 @@
 				<div class="col-lg-3">
 					<p><sm>2013 - CURRENT</sm></p>
 				</div>
-	
 				<div class="col-lg-6 col-lg-offset-3">
 					<p><t>Engineering 103 1-on-1 Peer Tutor</t><br/>
-						Duke University
+						<strong>Duke University</strong>
 					</p>
 					<p>Work individually with students on homework, problem sets, and preparing for exams in an introductory programming course taught in MATLAB</p>
 				</div>
@@ -349,7 +321,7 @@
 				</div>
 				<div class="col-lg-6 col-lg-offset-3">
 					<p><t>Prefect, Head of High School Student Government</t><br/>
-						Univesity School of Milwaukee
+						<strong>Univesity School of Milwaukee</strong>
 					</p>
 					<li>1 of 6 students elected to school’s highest leadership position</li> 
                 <li>Perform tasks including organizing blood drives, dances, dodge ball tournament, and town hall event to facilitate communication between teachers and students</li>
@@ -357,37 +329,13 @@
 				<div class="col-lg-3">
 					<p><sm>2012 - 2013</sm></p>
 				</div>
-		</div><!--/.row -->
-		<hr>
-	</div><!--/.container -->
-
-	<div class="container desc">
-		<div class="row">
-			<div class="col-lg-6">
-				<h2 id="section-3">Technical Skills</h2>
-              <ul>
-              <li>Java (3 semesters of coursework)</li>
-              <li>Tools: Android, JavaFX, Gradle, Maven, Jenkins, Jacoco, Mockito, Jetty, JUnit</li>
-              <li>MATLAB (1 semester of coursework)</li>
-              <li>Latex (1 semester of coursework) </li>
-              <li>Scheme (1 semester of coursework)</li>
-              <li>HTML/CSS</li>
-              <li>C and MIPS Assembly </li>
-              </ul>
-              </div>
-             <div class="col-lg-6">
-              <h2 id="section-4">Relevant Coursework</h2>
-              <ul>
-                <li>CS 308 – Software Design and Implementation asdf<strong></strong></li>
-                <li>CS 250 – Computer Architecture</li>
-                <li>CS 230 – Discrete Math for Computer Science</li>
-                <li>CS 201 – Data Structures and Algorithms</li>
-                <li>EGR 103L – Computational Methods in Engineering</li>
-              </ul>
-			</div>
 		</div>
-	</div>
+		<br>
+		
+	</div>	
 
+	<section id="info" name="info"></section>
+	<hr>
 	<div class="container desc">
 		<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
@@ -401,13 +349,12 @@
                 <li>Captain (Senior Year), 2nd Team All Conference, Wisconsin Division 2 State Champion, Streak of 75 consecutive starts</li>
                 </ul>
                 </div>					
-		</div><!--/.row -->
+		</div>
 		<br>
-	</div><!--/.container -->	
+	</div>
 
 
 	<section id="contact" name="contact"></section>
-	<!--FOOTER DESCRIPTION -->
 	<div id="footwrap">
 		<div class="container">
 			<div class="row">
@@ -431,13 +378,13 @@
 				<div class="col-lg-3">
 					<p><sm>LINKS</sm></p>
 					<p>
-						<a href="#"><i class="icon-facebook"></i></a>
-						<a href="#"><i class="icon-linkedin"></i></a>						
+						<a class="menu-item" href="http://github.com/nagrawal7"><i class="icon-github"></i></a>
+						<a href="http://www.linkedin.com/pub/nishad-agrawal/9/21/a98"><i class="icon-linkedin"></i></a>						
 					</p>
 				</div>
-			</div><!--/.row -->
-		</div><!--/.container -->
-	</div><!--/ #footer -->
+			</div>
+		</div>
+	</div>
 	
 	<div id="c">
 		<div class="container">
