@@ -11,7 +11,7 @@ body {
     font-family: "Lato";
     font-weight: 300;
     font-size: 16px;
-    color: #555;
+    color: black;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -88,13 +88,14 @@ a:after {
 }
 
 #section-topbar a {
-  color: #fff;
+  color: black;
 }
 
 #topbar-inner {
-	background: #111;
+	background: white;
 	line-height: 0;
 	text-align: center;
+	opacity: 0.9;
 }
 
 /*
@@ -108,7 +109,7 @@ a:after {
 	margin: 0;
 	padding: 0;
 
-	border-right: 1px solid #222;
+	/* border-right: 1px solid #222; */
 
 	/* For IE, the outcast */
 	zoom:1;
@@ -127,13 +128,15 @@ a:after {
   font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   padding: 18px 20px 18px 20px;
-  border-left: 1px solid #222;
+  border-left: px solid #000;
+  /* border-bottom-width: 1px; */ 
+  /* border-bottom-style: solid; */ 
+  /* border-bottom-color: rgb(0, 0, 0); */
 }
 
 	#section-topbar ul#nav a:hover {
-	  background: #222;
+	  background: #01579B;
 	  text-decoration: none;
-	  border-left: 1px solid #111;
 	}
 
 	#section-topbar ul#nav .active a {
@@ -153,7 +156,7 @@ a:after {
 
 /* Header Wrap */
 #headerwrap {
-	background: url(../img/header-bg.jpg) no-repeat center top;
+	background: url(../img/nishad.jpg) no-repeat center top;
 	margin-top: 60px;
 	padding-top:140px;
 	text-align:center;
@@ -175,23 +178,23 @@ a:after {
 
 #headerwrap h1 {
 	font-size: 80px;
-	color: white;
+	color: black;
 }
 
 #headerwrap h3 {
 	font-size: 20px;
-	color: white;
+	color: black;
 }
 
 #headerwrap h3 a {
 	font-size: 20px;
-	color: white;
+	color: black;
 }
 
 /* Intnro Wrap */
 
 #intro {
-	background: #2c3e50;
+	background: #01579B;
 	padding-top: 60px;
 	padding-bottom: 60px;
 	color: white;
@@ -221,7 +224,7 @@ a:after {
 }
 
 #footwrap {
-	background: #2f2f2f;
+	background: #01579B;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -241,20 +244,28 @@ a:after {
 
 #footwrap i {
 	padding-right: 8px;
-	color: #1abc9c;
+	color: black;
 	font-size: 30px;
+}
+
+#footwrap a {
+	color: white;
 }
 
 /* Copyright Wrap */
 
 #c {
-	background: #222222;
+	background: black;
 	padding-top: 15px;
 	text-align: right;
 }
 
 #c p {
 	color: white
+}
+
+#c a {
+	color: #01579B;
 }
 
 
@@ -266,18 +277,18 @@ a:after {
 }
 
 .desc p {
-	color: #2f2f2f;
+	color: black;
 }
 
 .desc t {
-	color: #34495e;
+	color: #01579B;
 	font-weight: 700;
 }
 
 .desc imp {
 	padding: 6px;
 	color: white;
-	background: #34495e;
+	background: #01579B;
 }
 
 .desc more {
@@ -288,3 +299,8 @@ a:after {
 sm {
 	font-size: 12px;
 }
+
+.btn-primary {
+	background-color: #01579B;	
+}
+
