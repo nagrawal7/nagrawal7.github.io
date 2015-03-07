@@ -140,15 +140,15 @@ a:after {
 	}
 
 	#section-topbar ul#nav .active a {
-		background: #44bbaa;
+		background: #01579B;
 		border-left: 1px solid #111;
 	}
 
 		#section-topbar ul#nav .active a:hover {
-			background: #44bbaa;
+			background: #01579B;
 		}
 #section-topbar i {
-	font-size: 25px;
+	font-size: 20px;
 }
 /*---------------------------------------------------
 	SECTION WRAPS
@@ -157,6 +157,7 @@ a:after {
 /* Header Wrap */
 #headerwrap {
 	background: url(../img/nishad.jpg) no-repeat center top;
+	background-size:50% cover;
 	margin-top: 60px;
 	padding-top:140px;
 	text-align:center;
