@@ -1,403 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Nishad Agrawal</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Nishad Agrawal</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    
-    <script src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
-    
-    <script src="assets/js/Chart.js"></script>
-    
+  <!-- JS -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/resume.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="login.js"></script>
-    <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-51271744-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 
-	  ga('create', 'UA-51271744-1', 'auto');
-	  ga('send', 'pageview');
+</head>
 
-	</script>    
-  </head>
+<body data-spy="scroll" data-offset="0" data-target="#nav">
+  <div id="section-topbar">
+    <div id="topbar-inner">
+      <div class="container">
+        <div class="row">
+          <div class="dropdown">
+            <ul id="nav" class="nav" style="vertical-align:middle">
+              <li class="menu-item"><a class="smoothScroll" href="#education" title="Education"><i class="icon-book"></i></a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#tech" title="Technical Experience"><i class="icon-laptop"></i></a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#techskills" title="Projects and Skills"><i class="icon-code"></i></a></li>
+              <li class="menu-item"><a class="smoothScroll" href="#leadership" title="Leadership Experience"><i class="icon-briefcase"></i></a></li>
+              <li class="menu-item"><a class="menu-item" href="http://github.com/nagrawal7"><i class="icon-github"></i></a></li>
+              <li class="menu-item"><a href="http://www.linkedin.com/pub/nishad-agrawal/9/21/a98"><i class="icon-linkedin"></i></a></li>
+            </ul>
+          </div>
 
-  <body data-spy="scroll" data-offset="0" data-target="#nav">  
+          <div class="clear"></div>
+        </div>
+      </div>
 
-	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-      data-keyboard="false" data-backdrop="static" style="background-color: #01579B">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">                    
-                    <h4 class="modal-title">Welcome to Nishad's website!</h4>
-                </div>                
-              	<div class="modal-body">    
-                  	<div class="form-group">     
-                  		<div class="col-xs-6">
-                  			<p style="color:black">Passkey:</p>
-                  		</div>
-	                    <div class="col-xs-5">
-	                        <input type="password" class="form-control" name="password" id="passkeyInput" />                            
-	                    </div>                        
-	                    <div class="col-xs-1 hide"  id="wrongIcon">
-	                    	<span class="glyphicon glyphicon-remove" aria-hidden="true" style="vertical-align:middle; color:red "></span>
-                    	</div>
-                  	</div>                                  
-          		</div>
-            	<div class="modal-footer">
-        			<button type="submit" class="btn btn-primary" data-toggle="modal" id="loginButton">Enter</button>        				
-      			</div>
-        	</div>
-    	</div>
-	</div>
-
-  	<div class = "hide" id="pageContent">	
-	<div id="section-topbar">
-		<div id="topbar-inner">
-			<div class="container">
-				<div class="row">
-					<div class="dropdown">
-						<ul id="nav" class="nav" style="vertical-align:middle">
-							<li class="menu-item" ><a class="smoothScroll" href="#about" title="About"><i class="icon-user"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#education" title="Education"><i class="icon-book"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#tech" title="Technical Experience"><i class="icon-laptop"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#techskills" title="Technical Skills"><i class="icon-code"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#work" title="Work Experience"><i class="icon-briefcase"></i></a></li>
-							<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
-						</ul><!--/ uL#nav -->
-					</div><!-- /.dropdown -->
-
-					<div class="clear"></div>
-				</div><!--/.row -->
-			</div><!--/.container -->
-
-			<div class="clear"></div>
-		</div><!--/ #topbar-inner -->
-	</div><!--/ #section-topbar -->
-	
-	<div id="headerwrap">
-		<div class="container">
-			<div class="row centered">
-				<div class="col-lg-12">
-					<h1>Nishad Agrawal</h1>
-					<h3>Aspiring Software Engineer | <a href="mailto:nna6@duke.edu">nna6@duke.edu</a></h3>
-				</div><!--/.col-lg-12 -->
-			</div><!--/.row -->
-		</div><!--/.container -->
-	</div><!--/.#headerwrap -->
-	
-
-	<section id="about" name="about"></section>	
-	<div id="intro">		
-		<br>	
-		<div class="container">
-			<div class="row">				
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>ABOUT</h5>
-				</div>
-				<div class="col-lg-6">
-					<p>I'm a Sophomore at Duke University studying Electrical and Computer Engineering with a Double Major in Computer Science. I'm interested in all types of software engineering and am open to all potential opportunities. I also have skills in team management, leadership, and communication.</p>
-				</div>
-				<div class="col-lg-3">
-					<p><a href="" id="resumeLink"><i class="icon-file"></i></a> <sm>
-					DOWNLOAD PDF</sm></p>
-				</div>				
-			</div>
-		</div>
-	</div>
-
-
-	<section id="education" name="education"></section>
-	<br>
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>EDUCATION</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>B.S. in Electrical and Computer Engineering</t><br/>
-						<strong>Duke University</strong> in Durham, NC<br/>
-						<i>Double Major with Computer Science</i> <br>
-						<i>Cumulative GPA: 3.96/4.00</i><br>
-                		<i>Dean’s List with Distinction (Top 5%)</i>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>GRADUATING IN MAY 2017</sm><br/>
-					<imp><sm>IN PROGRESS</sm></imp>
-					</p>
-				</div>
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>High School Dipolma</t><br/>
-						<strong>University School of Milwaukee</strong> in Milwaukee, WI<br/>
-						<i>GPA: 4.23/4.00 (Salutatorian and Cum Laude Society)</i><br>
-						<i>National AP Scholar, AP Scholar with Distinction, National Merit Finalist</i>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>MAY 2013</sm></p>
-				</div>
-		</div>
-		<br>
-	</div>
-	
-	<section id="tech" name="tech"></section>
-	<hr>
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>TECHNICAL EXPERIENCE</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>Software Developer Intern</t><br/>
-						<strong>TeraMedica Inc.</strong></p>
-						<p>Worked full-time for 3 months producing unit test code and developing web application to run database integration tests across Oracle, SQL Server, and DB2 using JSF</p>
-                		<p>Surpassed initial project goal of 60% code coverage in single module, went on to raise 3 additional modules from 10% to 70% coverage and doubled coverage across entire code base (300,000 lines)</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>SUMMER 2014</sm></p>
-				</div>	
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Android App Developer</t><br/>
-						<strong>Dr. Dawg Restaurant</strong> <br/>
-					</p>
-					<p>Independently contracted to produce user-friendly, functional app to provide map directions, social media interaction, and mobile ordering system for customers.</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>SUMMER 2013</sm></p>
-				</div>
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Corporate IT Intern</t><br/>
-						<strong>Johnson Controls</strong> <br/>
-					</p>
-					<p>Present Research Cloud Computing and Social Media to CIO and his team.</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>SUMMER 2012 (1 WEEK)</sm></p>
-				</div>
-		</div>
-		<br>
-		
-	</div>
-
-	<section id="techskills" name="techskills"></section>
-	<hr>
-	<div class="container desc">
-		<div class="row">
-			<div class="col-sm-6">
-				<h2 id="section-3">Technical Skills</h2>
-				<table class="table table-condensed table-hover">
-				    <thead>
-				        <tr>
-				            <th>Language</th>
-				            <th>Experience</th>
-				            <th>Tools</th>
-				        </tr>
-				    </thead>
-				    <tbody>
-				    	<tr>
-				            <td><strong>Java</strong></td>
-				            <td>3 Semesters</td>
-				            <td>Android, JavaFX, Gradle, Maven, Jenkins, Jacoco, Mockito, Jetty, JUnit</td>
-				        </tr>
-				        <tr>
-				            <td><strong>C and MIPS Assembly</strong></td>
-				            <td>1 Semester</td>
-				            <td>-</td>
-				        </tr>
-				        <tr>
-				            <td><strong>MATLAB</strong></td>
-				            <td>2 Semesters</td>
-				            <td>Simulink</td>
-				        </tr>
-				        <tr>
-				        	<td><strong>HTML/CSS/JS</strong></td>
-				            <td>Self-Taught</td>
-				            <td>-</td>
-				        </tr>
-				        <tr>
-				        	<td><strong>Scheme</strong></td>
-				            <td>1 Semester</td>
-				            <td>Functional Programming</td>
-				        </tr>
-				        <tr>
-				        	<td><strong>Text Editing</strong></td>
-				            <td>...</td>
-				            <td>Markdown and Latex</td>
-				        </tr>
-				    </tbody>
-				</table>
-              </div>
-             <div class="col-sm-6">
-              <h2 id="section-4">Relevant Coursework</h2>
-                <table class="table table-condensed table-hover">
-				    <thead>
-				        <tr>
-				            <th>Course</th>
-				            <th>Name</th>
-				            <th>Grade</th>
-				        </tr>
-				    </thead>
-				    <tbody>
-				    	<tr>
-				            <td>CS 330</td>
-				            <td>Algorithms</td>
-				            <td><strong>TBD</strong></td>
-				        </tr>
-				        <tr>
-				            <td>CS 308</td>
-				            <td>Software Design and Implementation</td>
-				            <td><strong>A</strong></td>
-				        </tr>
-				        <tr>
-				            <td>CS 250</td>
-				            <td>Computer Architecture</td>
-				            <td><strong>A</strong></td>
-				        </tr>
-				        <tr>
-				            <td>CS 230</td>
-				            <td>Discrete Math for Computer Science</td>
-				            <td><strong>A</strong></td>
-				        </tr>
-				        <tr>
-				            <td>CS 201</td>
-				            <td>Data Structures and Algorithms</td>
-				            <td><strong>A</strong></td>
-				        </tr>
-				        <tr>
-				            <td>EGR 103L</td>
-				            <td>Computational Methods in Engineering</td>
-				            <td><strong>A</strong></td>
-				        </tr>
-				    </tbody>
-				</table>
-			</div>
-		</div>
-		<br>		
-	</div>
-			
-	<section id="work" name="work"></section>	
-	<hr>	
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>WORK AND LEADERSHIP EXPERIENCE</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>Student Assistant</t><br/>
-						<strong>Duke Athletic Facilities and Game Operations</strong><br/>
-					</p>
-					<p>Work with athletic department, varsity teams, facilities staff, and spectators to set up, run, and break down athletic events (10 hrs. / week)
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>2013 - CURRENT</sm></p>
-				</div>
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Engineering 103 1-on-1 Peer Tutor</t><br/>
-						<strong>Duke University</strong>
-					</p>
-					<p>Work individually with students on homework, problem sets, and preparing for exams in an introductory programming course taught in MATLAB</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>AUGUST 2014 - CURRENT</sm></p>
-				</div>
-				<div class="col-lg-6 col-lg-offset-3">
-					<p><t>Prefect, Head of High School Student Government</t><br/>
-						<strong>Univesity School of Milwaukee</strong>
-					</p>
-					<li>1 of 6 students elected to school’s highest leadership position</li> 
-                <li>Perform tasks including organizing blood drives, dances, dodge ball tournament, and town hall event to facilitate communication between teachers and students</li>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>2012 - 2013</sm></p>
-				</div>
-		</div>
-		<br>
-		
-	</div>	
-
-	<hr>
-	<div class="container desc">
-		<div class="row">
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>OTHER SKILLS AND INTERESTS</h5>
-				</div>
-				<div class="col-lg-6">
-				<ul>
-					<li>Public Speaking – within the past two years I have given 5 speeches to 300+ person audiences</li>
-                <li>Fluent in English, Spanish, Hindi, and Marathi</li>
-                <li>High School Varsity Baseball </li>
-                <li>Captain (Senior Year), 2nd Team All Conference, Wisconsin Division 2 State Champion, Streak of 75 consecutive starts</li>
-                </ul>
-                </div>					
-		</div>
-		<br>
-	</div>
-
-
-	<section id="contact" name="contact"></section>
-	<div id="footwrap">
-		<div class="container">
-			<div class="row">
-			
-				<div class="col-lg-2 col-lg-offset-1">
-					<h5>CONTACT</h5>
-				</div>
-				<div class="col-lg-6">
-					<p><t>Email</t><br/>
-						<a href="mailto:nna6@duke.edu">nna6@duke.edu</a><br>
-					</p>
-					<p><t>Address</t><br>
-						Few Quad 212<br>
-                		Box Number 98177<br>
-                		Durham, NC 27708<br>
-					</p>
-					<p><t>Phone</t><br/>
-						262-565-7858 <br/>
-					</p>
-				</div>
-				<div class="col-lg-3">
-					<p><sm>LINKS</sm></p>
-					<p>
-						<a class="menu-item" href="http://github.com/nagrawal7"><i class="icon-github"></i></a>
-						<a href="http://www.linkedin.com/pub/nishad-agrawal/9/21/a98"><i class="icon-linkedin"></i></a>						
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div id="c">
-		<div class="container">
-			<p>Theme by <strong><a href="http://www.blacktie.co">BLACKTIE.CO</a></strong></p>		
-		</div>
-	</div>
-	
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.js"></script>
+      <div class="clear"></div>
     </div>
-  </body>
+  </div>
+
+  <div id="headerwrap">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-12">
+          <h1>Nishad Agrawal</h1>
+          <h3>Aspiring Software Engineer |
+            <a href="mailto:nna6@duke.edu">nna6@duke.edu</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="education" name="education"></section>
+  <br>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>EDUCATION</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>B.S. in Electrical and Computer Engineering</t>
+          <br/>
+          <strong>Duke University</strong> in Durham, NC
+          <br/>
+          <i>Double Major with Computer Science</i>
+          <br>
+          <i>GPA: 3.918/4.00</i>
+          <br>
+          <i>Dean’s List</i>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p><sm>MAY 2017</sm></p>
+      </div>
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>High School Dipolma</t>
+          <br/>
+          <strong>University School of Milwaukee</strong> in Milwaukee, WI
+          <br/>
+          <i>GPA: 4.23/4.00</i>
+          <br/>
+          <i>Salutatorian and Cum Laude Society</i>
+          <br>
+          <i>National AP Scholar, AP Scholar with Distinction, National Merit Finalist</i>
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p><sm>MAY 2013</sm></p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>RELEVANT COURSEWORK</h5>
+      </div>
+      <div class="col-sm-6">
+        <table class="table table-condensed table-hover" id="courseTable">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Name</th>
+              <th>Language</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+
+          <template id="courseRow">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </template>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <section id="tech" name="tech"></section>
+  <hr>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>TECHNICAL EXPERIENCE</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>Software Developer Intern</t>
+          <br/>
+          <strong>Epic</strong>
+          <br/>
+        </p>
+        <p>Did some cool ASP.NET stuff</p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>SUMMER 2015</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Software Developer Intern</t>
+          <br/>
+          <strong>Fujifilm - TeraMedica</strong>
+        </p>
+        <p>Produced unit test code and developed web application to run database
+          integration tests across Oracle, SQL Server, and DB2 using JSF.
+          Surpassed initial project goal of 60% code coverage in single module,
+          went on to raise 3 additional modules from 10% to 70% coverage and
+          doubled coverage across entire code base (300,000 lines).
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>SUMMER 2014</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Peer Tutor</t>
+          <br/>
+          <strong>Duke University</strong>
+        </p>
+        <p>Work individually with students on homework,
+          problem sets, and preparing for exams for an introductory programming
+          courses taught in Java (CS 201) and MATLAB (EGR 103L).</p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>2014 - N0W</sm>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section id="techskills" name="techskills"></section>
+  <hr>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>PROJECTS</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>I'm Free</t>
+          <br/>
+          <strong>Independent</strong>
+          <br/>
+        </p>
+        <p>Web application built with the Meteor JavaScript framework
+          in Summer 2015.</p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>SUMMER 2013</sm>
+        </p>
+      </div>
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Vooga Salad</t>
+          <br/>
+          <strong>CS 308 Group Project (10 people)</strong>
+          <br/>
+        </p>
+        <p>CS 308 Group project. manage a team of 10 developers to develop a
+          game authoring and playing environment for
+          sophisticated real time strategy games
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>FALL 2014</sm>
+        </p>
+      </div>
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Restaurant Android App</t>
+          <br/>
+          <strong>Dr. Dawg Restaurant</strong>
+          <br/>
+        </p>
+        <p>Independently contracted to produce user-friendly, functional app to
+           provide map directions, social media interaction, and mobile ordering
+            system for customers.</p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>SUMMER 2013</sm>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>SKILLS</h5>
+      </div>
+      <div class="col-sm-6">
+        Languages: Java, C#, HTML/CSS/JavaScript, SQL, C, Assembly, Scheme, LATEX.
+Tools: JavaFX, Bootstrap, Gradle, Maven, Jenkins, JUnit
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <section id="leadership" name="leadership"></section>
+  <hr>
+  <div class="container desc">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-1">
+        <h5>LEADERSHIP EXPERIENCE</h5>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <t>Student Assistant</t>
+          <br/>
+          <strong>Duke Athletic Facilities and Game Operations</strong>
+          <br/>
+        </p>
+        <p>Work with athletic department, varsity teams, facilities staff,
+          and spectators to set up, run, and break down NCAA Division I
+          athletic events and championships.
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>2013 - NOW</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Prefect</t>
+          <br/>
+          <strong>Univesity School of Milwaukee</strong>
+        </p>
+        <p>Elected to schools highest leadership position to run student
+          government and disciplinary committee, organize student body events
+          to foster school spirit, and facilitate communication between
+          teachers and students.
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>2012 - 2013</sm>
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-lg-offset-3">
+        <p>
+          <t>Varsity Baseball Shortstop </t>
+          <br/>
+          <strong>Univesity School of Milwaukee</strong>
+        </p>
+        <p>2013 Captain and 2nd Team All-Conference. 2010 State Champion.
+          Started 75 consecutive games across 4 seasons.
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <p>
+          <sm>2010 - 2013</sm>
+        </p>
+      </div>
+
+    </div>
+    <br>
+
+  </div>
+
+  <section id="contact" name="contact"></section>
+  <div id="footwrap">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-2 col-lg-offset-1">
+          <h5>CONTACT</h5>
+        </div>
+
+        <div class="col-lg-3">
+          <p>
+            <t>Email</t>
+            <br/>
+            <a href="mailto:nna6@duke.edu">nna6@duke.edu</a>
+          </p>
+          <p>
+            <t>Phone</t>
+            <br/> 262-565-7858
+          </p>
+        </div>
+        <div class="col-lg-3">
+          <p>
+            <t>Address</t>
+            <br> Few Quad 208
+            <br> Box Number 98177
+            <br> Durham, NC 27708
+          </p>
+        </div>
+        <div class="col-lg-2">
+          <p>
+            <sm>LINKS</sm>
+          </p>
+          <p>
+            <a class="menu-item" href="http://github.com/nagrawal7"><i class="icon-github"></i></a>
+            <a href="http://www.linkedin.com/pub/nishad-agrawal/9/21/a98"><i class="icon-linkedin"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="c">
+    <div class="container">
+      <p>Theme by
+        <strong><a href="http://www.blacktie.co">BLACKTIE.CO</a></strong>
+      </p>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/js/bootstrap.js"></script>
+</body>
 </html>
