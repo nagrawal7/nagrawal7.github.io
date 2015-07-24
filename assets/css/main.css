@@ -255,10 +255,18 @@ a:after {
   .jumbotron h3 a {
   	display: none;
   }
+
+  #section-topbar i {
+    font-size: 12px;
+  }
+  #section-topbar ul#nav a {
+    padding: 18px 12px 18px 12px;
+  }
 }
 
 .mobileTitle {
   background: #01579B;
+  color: white;
 }
 
 .mobileTitle h1,h3,a {
