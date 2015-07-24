@@ -82,8 +82,8 @@ a:after {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 10000;
-	overflow: visible;
+	z-index: 10;
+	overflow: hidden;
 	font: normal 16px/24px  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -129,9 +129,6 @@ a:after {
   text-decoration: none;
   padding: 18px 20px 18px 20px;
   border-left: px solid #000;
-  /* border-bottom-width: 1px; */
-  /* border-bottom-style: solid; */
-  /* border-bottom-color: rgb(0, 0, 0); */
 }
 
 	#section-topbar ul#nav a:hover {

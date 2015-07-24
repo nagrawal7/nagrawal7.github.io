@@ -8,10 +8,9 @@ function initializeCourses() {
     var c = courses[i];
     var clone = template.content.cloneNode(true);
     var td = clone.querySelectorAll('td');
-    td[0].innerHTML = c.course;
-    td[1].innerHTML = c.name;
-    td[2].innerHTML = c.lang;
-    td[3].innerHTML = c.grade;
+    td[0].innerHTML = c.name;
+    td[1].innerHTML = c.lang;
+    td[2].innerHTML = c.grade;
 
     $('#courseTable tbody').append(clone);
   }
