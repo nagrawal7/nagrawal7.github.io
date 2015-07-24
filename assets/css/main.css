@@ -74,116 +74,58 @@ a:after {
 
 
 /*---------------------------------------------------
-	3.1 Topbar
+	3.1 Navbar
 ---------------------------------------------------*/
 
-#section-topbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	overflow: hidden;
-	font: normal 16px/24px  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#section-topbar a {
+#navbar a {
   color: black;
 }
 
-#topbar-inner {
+.navbar {
 	background: #EEEEEE;
 	line-height: 0;
-	text-align: center;
-	opacity: 0.9;
+	opacity: 0.95;
 }
 
-/*
-	Top Bar
-
-	By default, top navigation bar uses "fixed" position
-*/
-#section-topbar ul#nav {
-	display: inline-block;
-	position: relative;
-	margin: 0;
-	padding: 0;
-
-	/* border-right: 1px solid #222; */
-
-	/* For IE, the outcast */
-	zoom:1;
-	*display: inline;
+.navbar {
+  color: black;
 }
 
-#section-topbar ul#nav > li {
-	display: block;
-    float: left;
-    padding: 0;
-}
-
-
-#section-topbar ul#nav a {
+.navbar ul#nav a {
   display: block;
-  font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   padding: 18px 20px 18px 20px;
   border-left: px solid #000;
 }
 
-	#section-topbar ul#nav a:hover {
+	.navbar ul#nav a:hover {
 	  background: #01579B;
 	  text-decoration: none;
 	}
 
-	#section-topbar ul#nav .active a {
+	.navbar ul#nav .active a {
 		background: #01579B;
 		border-left: 1px solid #111;
 	}
 
-		#section-topbar ul#nav .active a:hover {
+		.navbar ul#nav .active a:hover {
 			background: #01579B;
 		}
-#section-topbar i {
-	font-size: 20px;
-}
 /*---------------------------------------------------
 	SECTION WRAPS
 ---------------------------------------------------*/
 
 /* Header Wrap */
-.jumbotron {
-	background: url(../img/nishad.jpg) no-repeat center top;
-	background-size: cover;
-	margin-top: 60px;
-	padding-top:140px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 500px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .jumbotron {
   	background: url(../img/nishad.jpg) no-repeat center top;
   	background-size: cover;
-  	margin-top: 60px;
+  	margin-top: 56px;
   	padding-top:140px;
   	text-align:center;
   	background-attachment: relative;
   	background-position: center center;
-  	min-height: 500px;
+  	min-height: 300px;
   	width: 100%;
 
       -webkit-background-size: 100%;
@@ -212,22 +154,22 @@ a:after {
   	color: black;
   }
 
-  .mobileTitle {
+  .mobileTitle, .mobileNav {
     display: none;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 768px) {
   .jumbotron {
   	background: url(../img/nishad_small.jpg) no-repeat center top;
   	background-size: cover;
-  	margin-top: 60px;
+  	margin-top: 50px;
     margin-bottom: 0px;
   	padding-top:140px;
   	text-align:center;
   	background-attachment: relative;
   	background-position: center center;
-  	min-height: 500px;
+  	min-height: 300px;
   	width: 100%;
 
       -webkit-background-size: 100%;
@@ -254,7 +196,7 @@ a:after {
   }
 
   #section-topbar i {
-    font-size: 12px;
+    font-size: 14px;
   }
   #section-topbar ul#nav a {
     padding: 18px 12px 18px 12px;
@@ -268,6 +210,10 @@ a:after {
 
 .mobileTitle h1,h3,a {
   color: white;
+}
+
+.mobileNav {
+  padding-left: 5px;
 }
 
 /* Intnro Wrap */
